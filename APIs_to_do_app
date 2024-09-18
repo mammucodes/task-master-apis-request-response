@@ -1,0 +1,18 @@
+APIS for to_do_app
+
+===creating api for user =====
+createUser(UserInputRequest request)
+getUserDetails(String email, int token);
+updateUserPassword(string email,int token, String newPassword);
+updateUserFullName(string email,int token, String newFullName);
+createTask(TaskInputRequest,request);
+getTaskDetails(int taskId, int token);
+updateTask(int taskId, TaskRequest, reuest);
+deleteTask(int taskId);
+
+
+
+
+
+
+
