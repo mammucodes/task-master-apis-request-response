@@ -1,0 +1,202 @@
+========requests for createUser API===========
+request:{
+"email" : "mammuraj@156",
+"password" : 123456,
+"fullName" "MamathaReddy"
+}
+
+========Response for createUser============
+response:{
+"success" : true
+
+}
+{
+"sucess": false,
+"reason" : "Missing password",
+}
+{
+"sucess": false,
+"reason" : " password length is less than 5 charcters"
+}
+{
+"sucess": false,
+"reason" : "Email length is  less than 4 "
+}
+{
+"sucess": false,
+"reason" : "Email already exists "
+}
+{
+"sucess": false,
+"reason" : "Email  is not unquie"
+}
+{
+"sucess": false,
+"reason" : "Email is Missing"
+}
+{
+"sucess": false,
+"reason" : "Full name length is small than 6 charcters"
+}
+{
+"sucess": false,
+"reason" : "Full name is missing"
+}
+
+
+========requests for getUserDetails API===========
+
+sample request
+{
+  "email": "john@gmailcom",
+  "token": 123456
+}
+=======response for getUserDetails======
+{
+  "success" : true
+  "response": {
+    "userId": 101,
+    "email": "johndoe@example.com",
+    "fullName": "John Doe",
+    "createdDate": "2024-09-17"
+  }
+}
+
+{
+  "sucess": "true",
+  "reason": "Invalid token or user not found."
+}
+
+=========Request for updateUserPassword===========
+{
+  "email": "naag@gmailcom",
+  "token": 1265,
+  "newPassword": "naaga456"
+}
+=======Sample Rsponse for updateUserPassword===========
+
+{
+   "sucess": "true",
+  "message": "Password updated successfully."
+}
+{ "sucess": "true",
+  "message": "Invalid token or user not found."
+}
+
+=========Request for updateUserFullName=======
+{
+  "email": "riya1234@gmail.com",
+  "token": 1879,
+  "newFullName": "Riya Bhumi Gundeti"
+}
+======Sample Response for updateUserFullName===========
+{
+  "status": true,
+  "message": "Full name updated successfully."
+}
+{
+  "status": false,
+  "message": "Invalid token or user not found"
+}
+======Sample request for createTask==========
+
+{
+  "userId": 101,
+  "title": "Complete Assignment",
+  "description": "Finish the math assignment due tomorrow.",
+  "category": "Education",
+  "priority": "High",
+  "dueDate": "2024-09-20",
+  "status": "Pending"
+}
+========Response for createTask=======
+{
+  "status": true,
+  "message": "Task created successfully.",
+  "taskId": 1111
+}
+{
+  "status": false,
+  "message":  "User not found or invalid data."
+}
+=======Request for getTaskDetails===========
+
+{
+  "taskId": 1111,
+  "token": 123
+}
+======Response for getTaskDetails========
+
+{
+  "status": true,
+  "response": {
+    "taskId": 1111
+    "userId": 101,
+    "title": "Complete Assignment",
+    "description": "Finish the math assignment due tomorrow.",
+    "category": "Education",
+    "priority": "High",
+    "dueDate": "2024-09-20",
+    "status": "Pending",
+    "createdDate": "2024-09-17 12:12:12",
+    "updatedDate": "2024-09-18 5:30:45"
+  }
+}
+{
+  "status": false,
+  "message": "Invalid token or task not found."
+}
+========Request for updateTask==========
+{
+  "taskId": 2001,
+  "request": {
+    "title": "Complete Math Assignment",
+    "description": "Finish math assignment and review notes.",
+    
+  }
+  
+}
+=====Resposne for updateTask=======
+{
+  "status": true,
+  "message": "Task updated successfully."
+}
+
+{
+  "status": false,
+  "message": "Task not found or invalid data."
+}
+
+======Request for delete Task
+{
+  "taskId": 2001
+}
+
+=========Response for deeteTask=====
+{
+  "status": true,
+  "message": "Task deleted successfully."
+}
+
+{
+  "status": false
+  "message": "Task not found or unable to delete."
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
